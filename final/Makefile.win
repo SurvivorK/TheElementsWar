@@ -1,0 +1,76 @@
+# Project: graphics
+# Makefile created by Dev-C++ 5.9.2
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/imgui.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o libgraphics/Tower.o libgraphics/name.o libgraphics/fail.o libgraphics/shoot.o libgraphics/pause.o libgraphics/ABout.o libgraphics/BEGIN.o libgraphics/Victory.o libgraphics/Battle.o
+LINKOBJ  = main.o libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/imgui.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o libgraphics/Tower.o libgraphics/name.o libgraphics/fail.o libgraphics/shoot.o libgraphics/pause.o libgraphics/ABout.o libgraphics/BEGIN.o libgraphics/Victory.o libgraphics/Battle.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -mwindows -m32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"./include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++" -I"./include"
+BIN      = graphics.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3 -O2
+CFLAGS   = $(INCS) -m32 -g3 -O2
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+libgraphics/exceptio.o: libgraphics/exceptio.c
+	$(CC) -c libgraphics/exceptio.c -o libgraphics/exceptio.o $(CFLAGS)
+
+libgraphics/genlib.o: libgraphics/genlib.c
+	$(CC) -c libgraphics/genlib.c -o libgraphics/genlib.o $(CFLAGS)
+
+libgraphics/graphics.o: libgraphics/graphics.c
+	$(CC) -c libgraphics/graphics.c -o libgraphics/graphics.o $(CFLAGS)
+
+libgraphics/imgui.o: libgraphics/imgui.c
+	$(CC) -c libgraphics/imgui.c -o libgraphics/imgui.o $(CFLAGS)
+
+libgraphics/random.o: libgraphics/random.c
+	$(CC) -c libgraphics/random.c -o libgraphics/random.o $(CFLAGS)
+
+libgraphics/simpio.o: libgraphics/simpio.c
+	$(CC) -c libgraphics/simpio.c -o libgraphics/simpio.o $(CFLAGS)
+
+libgraphics/strlib.o: libgraphics/strlib.c
+	$(CC) -c libgraphics/strlib.c -o libgraphics/strlib.o $(CFLAGS)
+
+libgraphics/Tower.o: libgraphics/Tower.c
+	$(CC) -c libgraphics/Tower.c -o libgraphics/Tower.o $(CFLAGS)
+
+libgraphics/name.o: libgraphics/name.c
+	$(CC) -c libgraphics/name.c -o libgraphics/name.o $(CFLAGS)
+
+libgraphics/fail.o: libgraphics/fail.c
+	$(CC) -c libgraphics/fail.c -o libgraphics/fail.o $(CFLAGS)
+
+libgraphics/shoot.o: libgraphics/shoot.c
+	$(CC) -c libgraphics/shoot.c -o libgraphics/shoot.o $(CFLAGS)
+
+libgraphics/pause.o: libgraphics/pause.c
+	$(CC) -c libgraphics/pause.c -o libgraphics/pause.o $(CFLAGS)
+
+libgraphics/ABout.o: libgraphics/ABout.c
+	$(CC) -c libgraphics/ABout.c -o libgraphics/ABout.o $(CFLAGS)
+
+libgraphics/BEGIN.o: libgraphics/BEGIN.c
+	$(CC) -c libgraphics/BEGIN.c -o libgraphics/BEGIN.o $(CFLAGS)
+
+libgraphics/Victory.o: libgraphics/Victory.c
+	$(CC) -c libgraphics/Victory.c -o libgraphics/Victory.o $(CFLAGS)
+
+libgraphics/Battle.o: libgraphics/Battle.c
+	$(CC) -c libgraphics/Battle.c -o libgraphics/Battle.o $(CFLAGS)
